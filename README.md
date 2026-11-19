@@ -13,6 +13,10 @@ Complete the lab **in your existing groups**. Work together on one notebook and 
 |---|---|---|---|
 | [Name] | [ID] | [Example: evaluation pipeline] | [Username] |
 | Veronicah Mwichigi | 673730 | Model Evaluation and Limitations | Veronicahmwichigi |
+|John Lyomoki | 673396 | Part C and D | lyosticles-github |
+| Joseph Uthasyo | 674146 | Setup and repo | Jozee509N |
+| [Name] | [ID] | [Example: error analysis and README] | [Username] |
+| [Name] | [ID] | [Work completed] | [Username] |
 
 ## Study objective
 Explain the customer churn decision and why model selection must use development data only.
@@ -40,6 +44,15 @@ Synthetic fictional customer data created for teaching. No real customer records
 - **Tuned hyperparameters:** [Fill]
 - **Mean/SD CV F1:** [Fill]
 - **Why this choice:** [Write 100–200 words]
+
+## Comparison of two candidates using identical CV folds (5-fold stratified CV, primary metric: F1)
+
+| Model | Best setting | Mean F1 | F1 std | Fold 1 | Fold 2 | Fold 3 | Fold 4 | Fold 5 | Mean precision | Mean recall |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Logistic regression | C = 1 | 0.470 | 0.053 | 0.391 | 0.534 | 0.472 | 0.434 | 0.519 | 0.624 | 0.378 |
+| Decision tree | max_depth = 3 | 0.398 | 0.049 | 0.392 | 0.457 | 0.316 | 0.437 | 0.391 | 0.566 | 0.318 |
+
+Baseline (majority-class dummy): mean accuracy 0.665, mean F1 0.000, mean recall 0.000.
 
 ## Error and subgroup analysis
 - Summarize confusion matrix, false negatives and false positives.
