@@ -11,8 +11,9 @@ Complete the lab **in your existing groups**. Work together on one notebook and 
 
 | Group member | Student ID | Work completed | GitHub username or commit reference |
 |---|---|---|---|
-| [Name] | [ID] | [Example: evaluation pipeline] | [Username] |
+| Joseph Uthasyo | 674146 | Setup and repo | Jozee509N |
 | [Name] | [ID] | [Example: error analysis and README] | [Username] |
+| [Name] | [ID] | [Work completed] | [Username] |
 
 ## Study objective
 Explain the customer churn decision and why model selection must use development data only.
