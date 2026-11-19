@@ -63,9 +63,34 @@ Baseline (majority-class dummy): mean accuracy 0.665, mean F1 0.000.
 - **Why this choice:** We chose logistic regression (C = 1) because it had the highest mean F1 under the same 5-fold stratified CV used for every candidate (0.470 vs 0.398 for the best decision tree, max_depth = 3). The 0.072 gap is larger than the fold standard deviation of either model (0.053 and 0.049), so it is unlikely to be noise, and the two models had similar variability. Logistic regression also had higher mean recall (0.378 vs 0.318) and higher mean precision (0.624 vs 0.566), so it caught more churners with a better share of correct alerts. All candidates beat the majority-class baseline, which looked good on accuracy (0.665) but scored 0.0 F1 because it never predicts churn. The depth-5 tree was the most stable (std 0.023), but its mean F1 was lower (0.382), so we did not trade performance for stability. Logistic regression is also simpler and easier to explain. C = 1 and C = 10 tied, so we kept C = 1, the more regularised setting.
 
 ## Error and subgroup analysis
-- Summarize confusion matrix, false negatives and false positives.
-- Compare new versus established customer recall **with subgroup sample sizes**.
-- Explain business implications.
+
+1. Development Out-of-Fold Confusion Matrix
+
+Actual / Predicted| Stay| Churn
+Stay| 1,605| 205
+Churn| 566| 344
+
+The model correctly classified 1,605 customers who stayed (true negatives) and 344 customers who churned (true positives). It also produced 205 false positives and 566 false negatives.
+
+2. False Positives and False Negatives
+
+- False Positives (205): These are customers predicted to churn but who actually stayed. This means the model may incorrectly identify customers for retention interventions.
+- False Negatives (566): These are customers predicted to stay but who actually churned. This means the model failed to identify these customers as potential churners, resulting in missed opportunities for intervention.
+
+3. New vs Established Customer Subgroup Analysis
+
+The subgroup analysis was conducted to determine whether churn recall is worse for new customers than established customers.
+
+Metric| New Customers| Established Customers
+Subgroup sample size| 452| 2,268
+Actual churners| 261| 649
+Recall| 78.16%| 21.57%
+
+The results show that recall is considerably lower for established customers (21.57%) than for new customers (78.16%). Therefore, the model identifies actual churners more effectively among new customers than established customers.
+
+For new customers, the model identifies approximately 78 out of every 100 actual churners, compared to only 22 out of every 100 among established customers.
+
+These findings should be interpreted cautiously because the subgroup sizes differ considerably. The established customer subgroup contains 2,268 customers, while the new customer subgroup contains 452. The observed difference in recall does not necessarily explain why the model performs differently across the two groups.
 
 ## Permutation importance
 - Top two features and approximate importance values.
