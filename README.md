@@ -11,7 +11,7 @@ Complete the lab **in your existing groups**. Work together on one notebook and 
 
 | Group member | Student ID | Work completed | GitHub username or commit reference |
 |---|---|---|---|
-|John Lyomoki | 673396 | Test | lyosticles-github |
+|John Lyomoki | 673396 | Part C and D | lyosticles-github |
 | Joseph Uthasyo | 674146 | Setup and repo | Jozee509N |
 | [Name] | [ID] | [Example: error analysis and README] | [Username] |
 | [Name] | [ID] | [Work completed] | [Username] |
