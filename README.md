@@ -12,7 +12,7 @@ Complete the lab **in your existing groups**. Work together on one notebook and 
 | Group member | Student ID | Work completed | GitHub username or commit reference |
 |---|---|---|---|
 | [Name] | [ID] | [Example: evaluation pipeline] | [Username] |
-| [Veronicah Mwichigi] | [673730] | [Model Evaluation and Limitations] | [Veronicahmwichigi] |
+| Veronicah Mwichigi | 673730 | Model Evaluation and Limitations | Veronicahmwichigi |
 
 ## Study objective
 Explain the customer churn decision and why model selection must use development data only.
