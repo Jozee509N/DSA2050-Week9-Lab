@@ -1,0 +1,11 @@
+{
+  "selected_model": "Logistic regression",
+  "best_params": {
+    "model__C": 1
+  },
+  "primary_metric": "f1",
+  "cv_mean_f1": 0.47009865843703824,
+  "rationale": "We selected logistic regression (C = 1) using F1, chosen before comparison, under identical 5-fold stratified cross-validation. Its mean F1 was 0.470 (std 0.053) against 0.398 (std 0.049) for the best decision tree (max_depth = 3). The 0.072 gap is larger than the fold-to-fold spread of either model, and the variability is similar, so the advantage is unlikely to be noise. Logistic regression also had higher mean recall (0.378 vs 0.318) and precision (0.624 vs 0.566). Out-of-fold errors show 566 false negatives against 205 false positives, so recall for churn is low (about 0.38) and many churners are missed. Recall was much lower for Established customers (0.22, 649 churners among 2,268 customers) than for New customers (0.78, 261 among 452), and these results come from development data only. Logistic regression is also simpler and easier to explain to the provider. We therefore freeze it before opening the final test file.",
+  "random_seed": 42,
+  "scikit_learn_version": "1.9.1"
+}
